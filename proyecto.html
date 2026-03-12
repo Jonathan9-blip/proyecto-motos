@@ -27,6 +27,25 @@ text-shadow:
 0 0 40px #00ffff;
 }
 
+/* BUSCADOR */
+
+#buscador{
+padding:10px;
+width:250px;
+border-radius:5px;
+border:none;
+margin-bottom:10px;
+}
+
+/* FILTRO */
+
+#filtro{
+padding:10px;
+border-radius:5px;
+border:none;
+margin-left:10px;
+}
+
 /* GALERIA */
 
 .galeria{
@@ -37,7 +56,7 @@ gap:20px;
 padding:20px;
 }
 
-/* TARJETAS DE MOTOS */
+/* TARJETAS */
 
 .moto{
 width:250px;
@@ -47,9 +66,7 @@ background:#1c1c1c;
 padding:10px;
 border-radius:10px;
 border:2px solid #00ffff;
-box-shadow:
-0 0 5px #00ffff,
-0 0 10px #00ffff;
+box-shadow:0 0 10px #00ffff;
 }
 
 .moto img{
@@ -96,10 +113,9 @@ top:10px;
 right:15px;
 font-size:20px;
 cursor:pointer;
-color:#00ffff;
 }
 
-/* BOTONES NEON */
+/* BOTONES */
 
 button{
 background:transparent;
@@ -110,19 +126,14 @@ border-radius:5px;
 cursor:pointer;
 margin-top:10px;
 box-shadow:0 0 10px #00ffff;
-transition:0.3s;
 }
 
 button:hover{
 background:#00ffff;
 color:black;
-box-shadow:
-0 0 10px #00ffff,
-0 0 20px #00ffff,
-0 0 40px #00ffff;
 }
 
-/* AJUSTE PARA CELULAR */
+/* CELULAR */
 
 @media (max-width:768px){
 
@@ -148,40 +159,49 @@ width:90%;
 
 <h1>🏍️ Galería de Motos</h1>
 
-<div class="galeria">
+<input type="text" id="buscador" placeholder="Buscar moto..." onkeyup="buscarMoto()">
 
-<div class="moto" onclick="mostrarInfo('moto1')">
-<img src="./imagenes/italika280z..jpeg" alt="Italika 280z">
+<select id="filtro" onchange="filtrarCilindrada()">
+<option value="todas">Todas</option>
+<option value="250">200cc - 299cc</option>
+<option value="300">300cc - 349cc</option>
+<option value="400">350cc - 450cc</option>
+</select>
+
+<div class="galeria" id="galeria">
+
+<div class="moto" data-cc="280" onclick="mostrarInfo('moto1')">
+<img src="./imagenes/italika280z..jpeg">
 <h3>Italika 280z</h3>
 </div>
 
-<div class="moto" onclick="mostrarInfo('moto2')">
-<img src="./imagenes/Vort-X300R.jpeg" alt="Vort-X 300R">
+<div class="moto" data-cc="300" onclick="mostrarInfo('moto2')">
+<img src="./imagenes/Vort-X300R.jpeg">
 <h3>Vort-X 300R</h3>
 </div>
 
-<div class="moto" onclick="mostrarInfo('moto3')">
-<img src="./imagenes/KTM 390.jpeg" alt="KTM Duke 390 ABS">
+<div class="moto" data-cc="390" onclick="mostrarInfo('moto3')">
+<img src="./imagenes/KTM 390.jpeg">
 <h3>KTM Duke 390 ABS</h3>
 </div>
 
-<div class="moto" onclick="mostrarInfo('moto4')">
-<img src="./imagenes/Ninja 400.jpeg" alt="Ninja 400 ABS">
-<h3>NINJA 400 ABS</h3>
+<div class="moto" data-cc="400" onclick="mostrarInfo('moto4')">
+<img src="./imagenes/Ninja 400.jpeg">
+<h3>Ninja 400</h3>
 </div>
 
-<div class="moto" onclick="mostrarInfo('moto5')">
-<img src="./imagenes/storm 300.jpeg" alt="Storm 300 2.0">
-<h3>Storm 300 2.0</h3>
+<div class="moto" data-cc="300" onclick="mostrarInfo('moto5')">
+<img src="./imagenes/storm 300.jpeg">
+<h3>Storm 300</h3>
 </div>
 
-<div class="moto" onclick="mostrarInfo('moto6')">
-<img src="./imagenes/KTM 250 Duke.jpeg" alt="KTM 250 Duke">
+<div class="moto" data-cc="250" onclick="mostrarInfo('moto6')">
+<img src="./imagenes/KTM 250 Duke.jpeg">
 <h3>KTM 250 Duke</h3>
 </div>
 
-<div class="moto" onclick="mostrarInfo('moto7')">
-<img src="./imagenes/CF Moto 250NK.jpeg" alt="CF Moto 250NK">
+<div class="moto" data-cc="250" onclick="mostrarInfo('moto7')">
+<img src="./imagenes/CF Moto 250NK.jpeg">
 <h3>CF Moto 250NK</h3>
 </div>
 
@@ -198,109 +218,73 @@ width:90%;
 
 <script>
 
-const datos = {
+/* BUSCADOR */
 
-moto1: `
-<h2>Italika 280Z</h2>
-<p><strong>Motor:</strong> 280cc</p>
-<p><strong>Potencia:</strong> 18 HP aprox.</p>
-<p><strong>Velocidad Máxima:</strong> 135 km/h aprox.</p>
-<p><strong>Peso:</strong> 167 kg</p>
-<p><strong>Tipo:</strong> Deportiva urbana</p>
-<p><strong>Precio:</strong> $47,999 MXN</p>
+function buscarMoto(){
 
-<a href="https://www.youtube.com/results?search_query=italika+280z" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
+let input = document.getElementById("buscador").value.toLowerCase();
+let motos = document.getElementsByClassName("moto");
 
-<button onclick="cerrarModal()">Cerrar</button>
-`,
+for(let i=0;i<motos.length;i++){
 
-moto2: `
-<h2>Vort-X 300R</h2>
-<p><strong>Motor:</strong> 292cc</p>
-<p><strong>Potencia:</strong> 25 HP aprox.</p>
-<p><strong>Velocidad Máxima:</strong> 150 km/h aprox.</p>
-<p><strong>Peso:</strong> 175 kg</p>
+let nombre = motos[i].innerText.toLowerCase();
 
-<a href="https://www.youtube.com/results?search_query=vort+x+300r" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
+if(nombre.includes(input)){
+motos[i].style.display="block";
+}else{
+motos[i].style.display="none";
+}
 
-<button onclick="cerrarModal()">Cerrar</button>
-`,
+}
 
-moto3: `
-<h2>KTM Duke 390 ABS</h2>
-<p><strong>Motor:</strong> 373cc</p>
-<p><strong>Potencia:</strong> 43 HP</p>
-<p><strong>Velocidad Máxima:</strong> 170 km/h aprox.</p>
+}
 
-<a href="https://www.youtube.com/results?search_query=ktm+duke+390+abs" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
+/* FILTRO CORREGIDO */
 
-<button onclick="cerrarModal()">Cerrar</button>
-`,
+function filtrarCilindrada(){
 
-moto4: `
-<h2>Ninja 400 ABS</h2>
-<p><strong>Motor:</strong> 399cc</p>
-<p><strong>Potencia:</strong> 45 HP</p>
-<p><strong>Velocidad Máxima:</strong> 190 km/h aprox.</p>
+let filtro = document.getElementById("filtro").value;
+let motos = document.getElementsByClassName("moto");
 
-<a href="https://www.youtube.com/results?search_query=ninja+400+abs" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
+for(let i=0;i<motos.length;i++){
 
-<button onclick="cerrarModal()">Cerrar</button>
-`,
+let cc = parseInt(motos[i].getAttribute("data-cc"));
 
-moto5: `
-<h2>Storm 300 2.0</h2>
-<p><strong>Motor:</strong> 292cc</p>
-<p><strong>Potencia:</strong> 27 HP aprox.</p>
+if(filtro=="todas"){
+motos[i].style.display="block";
+}
 
-<a href="https://www.youtube.com/results?search_query=storm+300+2.0" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
+else if(filtro=="250" && cc>=200 && cc<=299){
+motos[i].style.display="block";
+}
 
-<button onclick="cerrarModal()">Cerrar</button>
-`,
+else if(filtro=="300" && cc>=300 && cc<=349){
+motos[i].style.display="block";
+}
 
-moto6: `
-<h2>KTM 250 Duke</h2>
-<p><strong>Motor:</strong> 249cc</p>
-<p><strong>Potencia:</strong> 30 HP</p>
+else if(filtro=="400" && cc>=350 && cc<=450){
+motos[i].style.display="block";
+}
 
-<a href="https://www.youtube.com/results?search_query=ktm+250+duke" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
+else{
+motos[i].style.display="none";
+}
 
-<button onclick="cerrarModal()">Cerrar</button>
-`,
+}
 
-moto7: `
-<h2>CF Moto 250NK</h2>
-<p><strong>Motor:</strong> 249cc</p>
-<p><strong>Potencia:</strong> 27.5 HP</p>
+}
 
-<a href="https://www.youtube.com/results?search_query=cf+moto+250nk" target="_blank">
-<button>🎥 Ver Video</button>
-</a>
-
-<button onclick="cerrarModal()">Cerrar</button>
-`
-
-};
+/* MODAL */
 
 function mostrarInfo(moto){
-document.getElementById("contenido-info").innerHTML = datos[moto];
-document.getElementById("modal").style.display = "flex";
+
+document.getElementById("contenido-info").innerHTML="<h2>Información de la moto</h2>";
+document.getElementById("modal").style.display="flex";
+
 }
 
 function cerrarModal(){
-document.getElementById("modal").style.display = "none";
+document.getElementById("modal").style.display="none";
 }
 
 </script>
