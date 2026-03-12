@@ -8,117 +8,123 @@
 <style>
 
 body{
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
-    text-align: center;
+margin:0;
+font-family:Arial, sans-serif;
+background:#111;
+color:white;
+text-align:center;
 }
+
+/* TITULO NEON */
 
 h1{
-    padding: 20px;
-}
-
-/* BUSCADOR */
-
-#buscador{
-    padding:10px;
-    width:250px;
-    border-radius:5px;
-    border:none;
-    margin-bottom:10px;
-}
-
-/* FILTROS */
-
-.filtros{
-    margin-bottom:20px;
-}
-
-.filtros button{
-    margin:5px;
+padding:20px;
+color:#00ffff;
+text-shadow:
+0 0 5px #00ffff,
+0 0 10px #00ffff,
+0 0 20px #00ffff,
+0 0 40px #00ffff;
 }
 
 /* GALERIA */
 
 .galeria{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:20px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:20px;
 }
 
+/* TARJETAS DE MOTOS */
+
 .moto{
-    width:250px;
-    cursor:pointer;
-    transition:transform 0.3s;
-    background:#1c1c1c;
-    padding:10px;
-    border-radius:10px;
+width:250px;
+cursor:pointer;
+transition:transform 0.3s, box-shadow 0.3s;
+background:#1c1c1c;
+padding:10px;
+border-radius:10px;
+border:2px solid #00ffff;
+box-shadow:
+0 0 5px #00ffff,
+0 0 10px #00ffff;
 }
 
 .moto img{
-    width:100%;
-    border-radius:10px;
+width:100%;
+border-radius:10px;
 }
 
 .moto:hover{
-    transform:scale(1.05);
+transform:scale(1.05);
+box-shadow:
+0 0 10px #00ffff,
+0 0 20px #00ffff,
+0 0 40px #00ffff;
 }
 
 /* MODAL */
 
 .modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.8);
-    justify-content:center;
-    align-items:center;
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
 }
 
 .modal-contenido{
-    background:#222;
-    padding:20px;
-    border-radius:10px;
-    width:400px;
-    text-align:left;
-    position:relative;
+background:#222;
+padding:20px;
+border-radius:10px;
+width:400px;
+text-align:left;
+position:relative;
+border:2px solid #00ffff;
+box-shadow:0 0 20px #00ffff;
 }
 
 .cerrar{
-    position:absolute;
-    top:10px;
-    right:15px;
-    font-size:20px;
-    cursor:pointer;
+position:absolute;
+top:10px;
+right:15px;
+font-size:20px;
+cursor:pointer;
+color:#00ffff;
 }
 
+/* BOTONES NEON */
+
 button{
-    background:red;
-    color:white;
-    border:none;
-    padding:8px 15px;
-    border-radius:5px;
-    cursor:pointer;
-    margin-top:10px;
+background:transparent;
+color:#00ffff;
+border:2px solid #00ffff;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+box-shadow:0 0 10px #00ffff;
+transition:0.3s;
 }
 
 button:hover{
-    background:darkred;
+background:#00ffff;
+color:black;
+box-shadow:
+0 0 10px #00ffff,
+0 0 20px #00ffff,
+0 0 40px #00ffff;
 }
 
-/* RESPONSIVE PARA CELULAR */
+/* AJUSTE PARA CELULAR */
 
 @media (max-width:768px){
-
-#buscador{
-width:80%;
-}
 
 .galeria{
 flex-direction:column;
@@ -142,50 +148,41 @@ width:90%;
 
 <h1>🏍️ Galería de Motos</h1>
 
-<input type="text" id="buscador" placeholder="🔎 Buscar moto..." onkeyup="buscarMoto()">
-
-<div class="filtros">
-<button onclick="filtrarMotos('todas')">Todas</button>
-<button onclick="filtrarMotos('250')">250cc</button>
-<button onclick="filtrarMotos('300')">300cc</button>
-<button onclick="filtrarMotos('400')">400cc</button>
-</div>
-
 <div class="galeria">
 
-<div class="moto" data-nombre="italika 280z" data-cc="300" onclick="mostrarInfo('moto1')">
-<img src="./imagenes/italika280z..jpeg">
+<div class="moto" onclick="mostrarInfo('moto1')">
+<img src="./imagenes/italika280z..jpeg" alt="Italika 280z">
 <h3>Italika 280z</h3>
 </div>
 
-<div class="moto" data-nombre="vort-x 300r" data-cc="300" onclick="mostrarInfo('moto2')">
-<img src="./imagenes/Vort-X300R.jpeg">
+<div class="moto" onclick="mostrarInfo('moto2')">
+<img src="./imagenes/Vort-X300R.jpeg" alt="Vort-X 300R">
 <h3>Vort-X 300R</h3>
 </div>
 
-<div class="moto" data-nombre="ktm duke 390" data-cc="400" onclick="mostrarInfo('moto3')">
-<img src="./imagenes/KTM 390.jpeg">
+<div class="moto" onclick="mostrarInfo('moto3')">
+<img src="./imagenes/KTM 390.jpeg" alt="KTM Duke 390 ABS">
 <h3>KTM Duke 390 ABS</h3>
 </div>
 
-<div class="moto" data-nombre="ninja 400" data-cc="400" onclick="mostrarInfo('moto4')">
-<img src="./imagenes/Ninja 400.jpeg">
+<div class="moto" onclick="mostrarInfo('moto4')">
+<img src="./imagenes/Ninja 400.jpeg" alt="Ninja 400 ABS">
 <h3>NINJA 400 ABS</h3>
 </div>
 
-<div class="moto" data-nombre="storm 300" data-cc="300" onclick="mostrarInfo('moto5')">
-<img src="./imagenes/storm 300.jpeg">
+<div class="moto" onclick="mostrarInfo('moto5')">
+<img src="./imagenes/storm 300.jpeg" alt="Storm 300 2.0">
 <h3>Storm 300 2.0</h3>
 </div>
 
-<div class="moto" data-nombre="ktm 250 duke" data-cc="250" onclick="mostrarInfo('moto6')">
-<img src="./imagenes/KTM 250 Duke.jpeg">
+<div class="moto" onclick="mostrarInfo('moto6')">
+<img src="./imagenes/KTM 250 Duke.jpeg" alt="KTM 250 Duke">
 <h3>KTM 250 Duke</h3>
 </div>
 
-<div class="moto" data-nombre="cf moto 250nk" data-cc="250" onclick="mostrarInfo('moto7')">
-<img src="./imagenes/CF Moto 250NK.jpeg">
-<h3>CF moto 250NK</h3>
+<div class="moto" onclick="mostrarInfo('moto7')">
+<img src="./imagenes/CF Moto 250NK.jpeg" alt="CF Moto 250NK">
+<h3>CF Moto 250NK</h3>
 </div>
 
 </div>
@@ -201,116 +198,112 @@ width:90%;
 
 <script>
 
-/* BUSCADOR */
+const datos = {
 
-function buscarMoto(){
-
-let input=document.getElementById("buscador").value.toLowerCase();
-let motos=document.querySelectorAll(".moto");
-
-motos.forEach(function(moto){
-
-let nombre=moto.getAttribute("data-nombre");
-
-if(nombre.includes(input)){
-moto.style.display="block";
-}else{
-moto.style.display="none";
-}
-
-});
-
-}
-
-/* FILTRO */
-
-function filtrarMotos(cc){
-
-let motos=document.querySelectorAll(".moto");
-
-motos.forEach(function(moto){
-
-let categoria=moto.getAttribute("data-cc");
-
-if(cc==="todas"){
-moto.style.display="block";
-}
-else if(categoria===cc){
-moto.style.display="block";
-}
-else{
-moto.style.display="none";
-}
-
-});
-
-}
-
-/* INFORMACIÓN DE MOTOS */
-
-const datos={
-
-moto1:`<h2>Italika 280Z</h2>
+moto1: `
+<h2>Italika 280Z</h2>
 <p><strong>Motor:</strong> 280cc</p>
-<p><strong>Potencia:</strong> 18 HP</p>
-<p><strong>Velocidad:</strong> 135 km/h</p>
+<p><strong>Potencia:</strong> 18 HP aprox.</p>
+<p><strong>Velocidad Máxima:</strong> 135 km/h aprox.</p>
+<p><strong>Peso:</strong> 167 kg</p>
+<p><strong>Tipo:</strong> Deportiva urbana</p>
 <p><strong>Precio:</strong> $47,999 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`,
 
-moto2:`<h2>Vort-X 300R</h2>
+<a href="https://www.youtube.com/results?search_query=italika+280z" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`,
+
+moto2: `
+<h2>Vort-X 300R</h2>
 <p><strong>Motor:</strong> 292cc</p>
-<p><strong>Potencia:</strong> 25 HP</p>
-<p><strong>Velocidad:</strong> 150 km/h</p>
-<p><strong>Precio:</strong> $79,999 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`,
+<p><strong>Potencia:</strong> 25 HP aprox.</p>
+<p><strong>Velocidad Máxima:</strong> 150 km/h aprox.</p>
+<p><strong>Peso:</strong> 175 kg</p>
 
-moto3:`<h2>KTM Duke 390</h2>
+<a href="https://www.youtube.com/results?search_query=vort+x+300r" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`,
+
+moto3: `
+<h2>KTM Duke 390 ABS</h2>
 <p><strong>Motor:</strong> 373cc</p>
 <p><strong>Potencia:</strong> 43 HP</p>
-<p><strong>Velocidad:</strong> 170 km/h</p>
-<p><strong>Precio:</strong> $139,999 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`,
+<p><strong>Velocidad Máxima:</strong> 170 km/h aprox.</p>
 
-moto4:`<h2>Ninja 400</h2>
+<a href="https://www.youtube.com/results?search_query=ktm+duke+390+abs" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`,
+
+moto4: `
+<h2>Ninja 400 ABS</h2>
 <p><strong>Motor:</strong> 399cc</p>
 <p><strong>Potencia:</strong> 45 HP</p>
-<p><strong>Velocidad:</strong> 190 km/h</p>
-<p><strong>Precio:</strong> $159,999 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`,
+<p><strong>Velocidad Máxima:</strong> 190 km/h aprox.</p>
 
-moto5:`<h2>Storm 300</h2>
+<a href="https://www.youtube.com/results?search_query=ninja+400+abs" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`,
+
+moto5: `
+<h2>Storm 300 2.0</h2>
 <p><strong>Motor:</strong> 292cc</p>
-<p><strong>Potencia:</strong> 27 HP</p>
-<p><strong>Velocidad:</strong> 155 km/h</p>
-<p><strong>Precio:</strong> $39,999 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`,
+<p><strong>Potencia:</strong> 27 HP aprox.</p>
 
-moto6:`<h2>KTM 250 Duke</h2>
+<a href="https://www.youtube.com/results?search_query=storm+300+2.0" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`,
+
+moto6: `
+<h2>KTM 250 Duke</h2>
 <p><strong>Motor:</strong> 249cc</p>
 <p><strong>Potencia:</strong> 30 HP</p>
-<p><strong>Velocidad:</strong> 150 km/h</p>
-<p><strong>Precio:</strong> $102,900 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`,
 
-moto7:`<h2>CF Moto 250NK</h2>
+<a href="https://www.youtube.com/results?search_query=ktm+250+duke" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`,
+
+moto7: `
+<h2>CF Moto 250NK</h2>
 <p><strong>Motor:</strong> 249cc</p>
 <p><strong>Potencia:</strong> 27.5 HP</p>
-<p><strong>Velocidad:</strong> 145 km/h</p>
-<p><strong>Precio:</strong> $88,990 MXN</p>
-<button onclick="cerrarModal()">Cerrar</button>`
+
+<a href="https://www.youtube.com/results?search_query=cf+moto+250nk" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+
+<button onclick="cerrarModal()">Cerrar</button>
+`
+
 };
 
 function mostrarInfo(moto){
-document.getElementById("contenido-info").innerHTML=datos[moto];
-document.getElementById("modal").style.display="flex";
+document.getElementById("contenido-info").innerHTML = datos[moto];
+document.getElementById("modal").style.display = "flex";
 }
 
 function cerrarModal(){
-document.getElementById("modal").style.display="none";
+document.getElementById("modal").style.display = "none";
 }
 
 </script>
 
 </body>
 </html>
-```
