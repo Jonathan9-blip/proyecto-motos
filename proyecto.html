@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Galería de Motos</title>
 
 <link rel="stylesheet" href="estilos.css">
@@ -14,64 +16,184 @@
 
 <h1>🏍️ Galería de Motos</h1>
 
-<input type="text" id="buscador" placeholder="Buscar moto..." onkeyup="buscarMoto()">
+<!-- CONTROLES -->
 
-<select id="filtro" onchange="filtrarCilindrada()">
-<option value="todas">Todas</option>
-<option value="250">200cc - 299cc</option>
-<option value="300">300cc - 349cc</option>
-<option value="400">350cc - 450cc</option>
+<div class="controles">
+
+<input
+type="text"
+id="buscador"
+placeholder="Buscar moto..."
+onkeyup="buscarMoto()"
+>
+
+<select id="filtroMarca" onchange="aplicarFiltros()">
+
+<option value="todas">Todas las marcas</option>
+
+<option value="italika">Italika</option>
+
+<option value="vortx">Vort-X</option>
+
+<option value="ktm">KTM</option>
+
+<option value="kawasaki">Kawasaki</option>
+
+<option value="cfmoto">CF Moto</option>
+
+<option value="yamaha">Yamaha</option>
+
+<option value="suzuki">Suzuki</option>
+
+<option value="honda">Honda</option>
+
+<option value="bajaj">Bajaj</option>
+
+<option value="vento">Vento</option>
+
 </select>
+
+<select id="filtroCilindrada" onchange="aplicarFiltros()">
+
+<option value="todas">Todas las cilindradas</option>
+
+<option value="200">150cc - 199cc</option>
+
+<option value="250">200cc - 299cc</option>
+
+<option value="300">300cc - 349cc</option>
+
+<option value="400">350cc - 450cc</option>
+
+<option value="500">451cc - 599cc</option>
+
+</select>
+
+<button onclick="scrollFavoritos()">
+⭐ Ver Favoritos
+</button>
+
+</div>
+
+<!-- GALERIA -->
 
 <div class="galeria">
 
-<div class="moto" data-cc="280" onclick="mostrarInfo('moto1')">
+<div class="moto" data-cc="280" data-marca="italika" onclick="mostrarInfo('moto1')">
 <img src="./imagenes/italika280z..jpeg">
-<h3>Italika 280z</h3>
+<h3>Italika 280Z</h3>
 </div>
 
-<div class="moto" data-cc="300" onclick="mostrarInfo('moto2')">
+<div class="moto" data-cc="300" data-marca="vortx" onclick="mostrarInfo('moto2')">
 <img src="./imagenes/Vort-X300R.jpeg">
 <h3>Vort-X 300R</h3>
 </div>
 
-<div class="moto" data-cc="390" onclick="mostrarInfo('moto3')">
+<div class="moto" data-cc="390" data-marca="ktm" onclick="mostrarInfo('moto3')">
 <img src="./imagenes/KTM 390.jpeg">
 <h3>KTM Duke 390 ABS</h3>
 </div>
 
-<div class="moto" data-cc="400" onclick="mostrarInfo('moto4')">
+<div class="moto" data-cc="400" data-marca="kawasaki" onclick="mostrarInfo('moto4')">
 <img src="./imagenes/Ninja 400.jpeg">
 <h3>Ninja 400 ABS</h3>
 </div>
 
-<div class="moto" data-cc="300" onclick="mostrarInfo('moto5')">
+<div class="moto" data-cc="300" data-marca="vento" onclick="mostrarInfo('moto5')">
 <img src="./imagenes/storm 300.jpeg">
 <h3>Storm 300 2.0</h3>
 </div>
 
-<div class="moto" data-cc="250" onclick="mostrarInfo('moto6')">
+<div class="moto" data-cc="250" data-marca="ktm" onclick="mostrarInfo('moto6')">
 <img src="./imagenes/KTM 250 Duke.jpeg">
 <h3>KTM 250 Duke</h3>
 </div>
 
-<div class="moto" data-cc="250" onclick="mostrarInfo('moto7')">
+<div class="moto" data-cc="250" data-marca="cfmoto" onclick="mostrarInfo('moto7')">
 <img src="./imagenes/CF Moto 250NK.jpeg">
 <h3>CF Moto 250NK</h3>
 </div>
 
+<div class="moto" data-cc="390" data-marca="ktm" onclick="mostrarInfo('moto8')">
+<img src="./imagenes/KTM RC 390.jpeg">
+<h3>KTM RC 390</h3>
 </div>
 
+<div class="moto" data-cc="400" data-marca="kawasaki" onclick="mostrarInfo('moto9')">
+<img src="./imagenes/Kawasaki Z400.jpeg">
+<h3>Kawasaki Z400</h3>
+</div>
+
+<div class="moto" data-cc="300" data-marca="cfmoto" onclick="mostrarInfo('moto10')">
+<img src="./imagenes/CF Moto 300NK.jpeg">
+<h3>CF Moto 300NK</h3>
+</div>
+
+<div class="moto" data-cc="200" data-marca="italika" onclick="mostrarInfo('moto11')">
+<img src="./imagenes/Italika Vort-X 200.jpeg">
+<h3>Vort-X 200</h3>
+</div>
+
+<div class="moto" data-cc="200" data-marca="ktm" onclick="mostrarInfo('moto12')">
+<img src="./imagenes/KTM RC 200.jpeg">
+<h3>KTM RC 200</h3>
+</div>
+
+<div class="moto" data-cc="320" data-marca="yamaha" onclick="mostrarInfo('moto13')">
+<img src="./imagenes/Yamaha R3.jpeg">
+<h3>Yamaha R3</h3>
+</div>
+
+<div class="moto" data-cc="320" data-marca="yamaha" onclick="mostrarInfo('moto14')">
+<img src="./imagenes/Yamaha MT-03.jpeg">
+<h3>Yamaha MT-03</h3>
+</div>
+
+<div class="moto" data-cc="150" data-marca="suzuki" onclick="mostrarInfo('moto15')">
+<img src="./imagenes/Suzuki GSX-R150.jpeg">
+<h3>Suzuki GSX-R150</h3>
+</div>
+
+<div class="moto" data-cc="500" data-marca="honda" onclick="mostrarInfo('moto16')">
+<img src="./imagenes/Honda CBR500R.jpeg">
+<h3>Honda CBR500R</h3>
+</div>
+
+<div class="moto" data-cc="200" data-marca="bajaj" onclick="mostrarInfo('moto17')">
+<img src="./imagenes/Bajaj Pulsar RS200.jpeg">
+<h3>Bajaj Pulsar RS200</h3>
+</div>
+
+</div>
+
+<!-- FAVORITOS -->
+
+<section class="favoritos-section">
+
+<h2 id="tituloFavoritos">
+❤️ Motos Favoritas
+</h2>
+
+<div id="listaFavoritos"></div>
+
+</section>
+
+<!-- MODAL -->
 
 <div class="modal" id="modal">
+
 <div class="modal-contenido">
+
 <span class="cerrar" onclick="cerrarModal()">✖</span>
+
 <div id="contenido-info"></div>
-</div>
+
 </div>
 
+</div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
