@@ -975,4 +975,8 @@ behavior:"smooth"
 // INICIAR
 // ===================================
 
+window.onload = function(){
+
 mostrarFavoritos();
+
+}
