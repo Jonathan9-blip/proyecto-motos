@@ -315,7 +315,208 @@ moto17: `
 <a href="https://www.youtube.com/results?search_query=bajaj+rs200" target="_blank">
 <button>🎥 Ver Video</button>
 </a>
-`
+`,
+
+moto18: `
+<h2>KTM Duke 200</h2>
+<p><strong>Motor:</strong> 199cc</p>
+<p><strong>Potencia:</strong> 25 HP</p>
+<p><strong>Velocidad Máxima:</strong> 140 km/h aprox.</p>
+<p><strong>Peso:</strong> 159 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $98,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.7/5)</p>
+
+<button onclick="toggleFavorito('KTM Duke 200')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=ktm+duke+200" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto19: `
+<h2>KTM Duke 125</h2>
+<p><strong>Motor:</strong> 125cc</p>
+<p><strong>Potencia:</strong> 14 HP</p>
+<p><strong>Velocidad Máxima:</strong> 120 km/h aprox.</p>
+<p><strong>Peso:</strong> 148 kg</p>
+<p><strong>Tipo:</strong> Naked urbana</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $82,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.4/5)</p>
+
+<button onclick="toggleFavorito('KTM Duke 125')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=ktm+duke+125" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto20: `
+<h2>KTM Adventure 390</h2>
+<p><strong>Motor:</strong> 373cc</p>
+<p><strong>Potencia:</strong> 43 HP</p>
+<p><strong>Velocidad Máxima:</strong> 170 km/h aprox.</p>
+<p><strong>Peso:</strong> 177 kg</p>
+<p><strong>Tipo:</strong> Adventure</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $165,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+
+<button onclick="toggleFavorito('KTM Adventure 390')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=ktm+adventure+390" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto21: `
+<h2>Yamaha R15</h2>
+<p><strong>Motor:</strong> 155cc</p>
+<p><strong>Potencia:</strong> 18 HP</p>
+<p><strong>Velocidad Máxima:</strong> 145 km/h aprox.</p>
+<p><strong>Peso:</strong> 142 kg</p>
+<p><strong>Tipo:</strong> Deportiva ligera</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $95,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.6/5)</p>
+
+<button onclick="toggleFavorito('Yamaha R15')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=yamaha+r15" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto22: `
+<h2>Yamaha MT-15</h2>
+<p><strong>Motor:</strong> 155cc</p>
+<p><strong>Potencia:</strong> 18 HP</p>
+<p><strong>Velocidad Máxima:</strong> 140 km/h aprox.</p>
+<p><strong>Peso:</strong> 138 kg</p>
+<p><strong>Tipo:</strong> Naked urbana</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $92,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.7/5)</p>
+
+<button onclick="toggleFavorito('Yamaha MT-15')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=yamaha+mt15" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto23: `
+<h2>Yamaha FZ25</h2>
+<p><strong>Motor:</strong> 249cc</p>
+<p><strong>Potencia:</strong> 20 HP</p>
+<p><strong>Velocidad Máxima:</strong> 145 km/h aprox.</p>
+<p><strong>Peso:</strong> 153 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $105,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
+
+<button onclick="toggleFavorito('Yamaha FZ25')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=yamaha+fz25" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto24: `
+<h2>Yamaha R7</h2>
+<p><strong>Motor:</strong> 689cc</p>
+<p><strong>Potencia:</strong> 73 HP</p>
+<p><strong>Velocidad Máxima:</strong> 230 km/h aprox.</p>
+<p><strong>Peso:</strong> 188 kg</p>
+<p><strong>Tipo:</strong> Superdeportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $250,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+
+<button onclick="toggleFavorito('Yamaha R7')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=yamaha+r7" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto25: `
+<h2>Kawasaki Ninja 650</h2>
+<p><strong>Motor:</strong> 649cc</p>
+<p><strong>Potencia:</strong> 67 HP</p>
+<p><strong>Velocidad Máxima:</strong> 210 km/h aprox.</p>
+<p><strong>Peso:</strong> 193 kg</p>
+<p><strong>Tipo:</strong> Deportiva touring</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $210,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.9/5)</p>
+
+<button onclick="toggleFavorito('Kawasaki Ninja 650')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=kawasaki+ninja+650" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto26: `
+<h2>Kawasaki ZX-6R</h2>
+<p><strong>Motor:</strong> 636cc</p>
+<p><strong>Potencia:</strong> 127 HP</p>
+<p><strong>Velocidad Máxima:</strong> 250 km/h aprox.</p>
+<p><strong>Peso:</strong> 198 kg</p>
+<p><strong>Tipo:</strong> Superdeportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $320,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+
+<button onclick="toggleFavorito('Kawasaki ZX-6R')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=kawasaki+zx6r" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto27: `
+<h2>Kawasaki Z650</h2>
+<p><strong>Motor:</strong> 649cc</p>
+<p><strong>Potencia:</strong> 68 HP</p>
+<p><strong>Velocidad Máxima:</strong> 210 km/h aprox.</p>
+<p><strong>Peso:</strong> 187 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $198,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+
+<button onclick="toggleFavorito('Kawasaki Z650')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=kawasaki+z650" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
 };
 
 // ===================================
