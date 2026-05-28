@@ -784,15 +784,17 @@ let coincideCC =
 
 cilindrada=="todas" ||
 
-(cilindrada=="200" && cc>=150 && cc<=199) ||
+(cilindrada=="125" && cc>=100 && cc<=149) ||
+
+(cilindrada=="150" && cc>=150 && cc<=199) ||
 
 (cilindrada=="250" && cc>=200 && cc<=299) ||
 
-(cilindrada=="300" && cc>=300 && cc<=349) ||
+(cilindrada=="400" && cc>=300 && cc<=499) ||
 
-(cilindrada=="400" && cc>=350 && cc<=450) ||
+(cilindrada=="650" && cc>=500 && cc<=699) ||
 
-(cilindrada=="500" && cc>=451 && cc<=599);
+(cilindrada=="700" && cc>=700);
 
 if(
 coincideBusqueda &&
@@ -869,7 +871,7 @@ function mostrarFavoritos(){
 
 let favoritos =
 JSON.parse(
-localStorage.getItem("favoritos")                 //aqui se leen los fav guardados para mostrar en pantalla 
+localStorage.getItem("favoritos")
 ) || [];
 
 let contenedor =
@@ -894,11 +896,29 @@ return;
 
 favoritos.forEach(moto => {
 
+let claveMoto = null;
+
+for(let clave in datos){
+
+if(datos[clave].includes(moto)){
+
+claveMoto = clave;
+
+break;
+
+}
+
+}
+
 contenedor.innerHTML += `
 
 <div class="favorito-item">
 
 <h3>${moto}</h3>
+
+<button onclick="mostrarInfo('${claveMoto}')">
+🏍️ Ver Moto
+</button>
 
 <button onclick="eliminarFavorito('${moto}')">
 ❌ Quitar
