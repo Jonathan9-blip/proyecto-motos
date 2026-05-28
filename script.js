@@ -517,6 +517,206 @@ moto27: `
 </a>
 `,
 
+moto28: `
+<h2>Honda CB300R</h2>
+<p><strong>Motor:</strong> 286cc</p>
+<p><strong>Potencia:</strong> 31 HP</p>
+<p><strong>Velocidad Máxima:</strong> 160 km/h aprox.</p>
+<p><strong>Peso:</strong> 145 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $125,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+
+<button onclick="toggleFavorito('Honda CB300R')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=honda+cb300r" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto29: `
+<h2>Honda CBR300R</h2>
+<p><strong>Motor:</strong> 286cc</p>
+<p><strong>Potencia:</strong> 30 HP</p>
+<p><strong>Velocidad Máxima:</strong> 170 km/h aprox.</p>
+<p><strong>Peso:</strong> 162 kg</p>
+<p><strong>Tipo:</strong> Deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $138,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.7/5)</p>
+
+<button onclick="toggleFavorito('Honda CBR300R')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=honda+cbr300r" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto30: `
+<h2>Honda Hornet 2.0</h2>
+<p><strong>Motor:</strong> 184cc</p>
+<p><strong>Potencia:</strong> 17 HP</p>
+<p><strong>Velocidad Máxima:</strong> 130 km/h aprox.</p>
+<p><strong>Peso:</strong> 142 kg</p>
+<p><strong>Tipo:</strong> Naked urbana</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $89,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
+
+<button onclick="toggleFavorito('Honda Hornet 2.0')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=honda+hornet+2.0" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto31: `
+<h2>Suzuki Gixxer 250</h2>
+<p><strong>Motor:</strong> 249cc</p>
+<p><strong>Potencia:</strong> 26 HP</p>
+<p><strong>Velocidad Máxima:</strong> 150 km/h aprox.</p>
+<p><strong>Peso:</strong> 156 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $110,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.6/5)</p>
+
+<button onclick="toggleFavorito('Suzuki Gixxer 250')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=suzuki+gixxer+250" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto32: `
+<h2>Suzuki GSX-S750</h2>
+<p><strong>Motor:</strong> 749cc</p>
+<p><strong>Potencia:</strong> 114 HP</p>
+<p><strong>Velocidad Máxima:</strong> 240 km/h aprox.</p>
+<p><strong>Peso:</strong> 213 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $245,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.9/5)</p>
+
+<button onclick="toggleFavorito('Suzuki GSX-S750')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=suzuki+gsx+s750" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto33: `
+<h2>CF Moto 450SR</h2>
+<p><strong>Motor:</strong> 449cc</p>
+<p><strong>Potencia:</strong> 50 HP</p>
+<p><strong>Velocidad Máxima:</strong> 190 km/h aprox.</p>
+<p><strong>Peso:</strong> 179 kg</p>
+<p><strong>Tipo:</strong> Deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $165,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+
+<button onclick="toggleFavorito('CF Moto 450SR')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=cfmoto+450sr" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto34: `
+<h2>CF Moto 650NK</h2>
+<p><strong>Motor:</strong> 649cc</p>
+<p><strong>Potencia:</strong> 60 HP</p>
+<p><strong>Velocidad Máxima:</strong> 200 km/h aprox.</p>
+<p><strong>Peso:</strong> 206 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $185,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.6/5)</p>
+
+<button onclick="toggleFavorito('CF Moto 650NK')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=cfmoto+650nk" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto35: `
+<h2>Bajaj Dominar 400</h2>
+<p><strong>Motor:</strong> 373cc</p>
+<p><strong>Potencia:</strong> 40 HP</p>
+<p><strong>Velocidad Máxima:</strong> 165 km/h aprox.</p>
+<p><strong>Peso:</strong> 193 kg</p>
+<p><strong>Tipo:</strong> Touring deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $125,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.5/5)</p>
+
+<button onclick="toggleFavorito('Bajaj Dominar 400')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=bajaj+dominar+400" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto36: `
+<h2>Bajaj NS200</h2>
+<p><strong>Motor:</strong> 199cc</p>
+<p><strong>Potencia:</strong> 24 HP</p>
+<p><strong>Velocidad Máxima:</strong> 145 km/h aprox.</p>
+<p><strong>Peso:</strong> 158 kg</p>
+<p><strong>Tipo:</strong> Naked deportiva</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $78,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐☆ (4.4/5)</p>
+
+<button onclick="toggleFavorito('Bajaj NS200')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=bajaj+ns200" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`,
+
+moto37: `
+<h2>Honda Rebel 500</h2>
+<p><strong>Motor:</strong> 471cc</p>
+<p><strong>Potencia:</strong> 46 HP</p>
+<p><strong>Velocidad Máxima:</strong> 175 km/h aprox.</p>
+<p><strong>Peso:</strong> 191 kg</p>
+<p><strong>Tipo:</strong> Cruiser</p>
+<p><strong>ABS:</strong> Sí</p>
+<p><strong>Precio:</strong> $195,000 MXN</p>
+<p><strong>Calificación:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+
+<button onclick="toggleFavorito('Honda Rebel 500')">
+❤️ Favorito
+</button>
+
+<a href="https://www.youtube.com/results?search_query=honda+rebel+500" target="_blank">
+<button>🎥 Ver Video</button>
+</a>
+`
+
 };
 
 // ===================================
